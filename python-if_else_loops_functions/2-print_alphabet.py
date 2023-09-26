@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for alphabet in range(97, 123):
-    print(chr(alphabet), end="")
-    if alphabet == 123:
-        break
+alphabet = ""
+for char in range(97, 123):
+    alphabet += chr(char)
+print("{}".format(alphabet), end="")
