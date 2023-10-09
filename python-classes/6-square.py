@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """ class square 6 """
+    """ class square6 """
 
     def __init__(self, size=0, position=(0, 0)):
         """ init """
