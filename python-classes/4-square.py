@@ -3,6 +3,7 @@
 
 
 class Square:
+    """access and update a private attribute """
     def __init__(self, size=0):
         """ init """
         self.size = size
