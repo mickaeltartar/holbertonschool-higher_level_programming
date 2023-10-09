@@ -1,52 +1,61 @@
 #!/usr/bin/python3
-class Square:
-    """ class square6 """
+"""module 6
+"""
 
+
+class Square:
+    """Access and update private attribute"""
     def __init__(self, size=0, position=(0, 0)):
-        """ init """
+        """init square"""
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """ getter method """
+
+        """def size of the square"""
         return (self.__size)
 
     @size.setter
     def size(self, value):
-        """ setter method """
+
+        """def value and raise exceptions for size"""
         if type(value) is not int:
-            raise TypeError('size must be an integer')
+            raise TypeError("size must be an integer")
         if value < 0:
-            raise ValueError('size must be >= 0')
+            raise ValueError("size must be >= 0")
         else:
             self.__size = value
 
     @property
     def position(self):
-        """ getter method """
+
+        """def position of the square"""
         return (self.__position)
 
     @position.setter
     def position(self, value):
-        """ position setter """
+
+        """def value and raise exception for positon"""
         if type(value) is not tuple:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError("position must be a tuple of 2 positive integers")
         elif len(value) != 2:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value[0]) and type(value[1]) is not int:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError("position must be a tuple of 2 positive integers")
         elif value[0] and value[1] < 0:
-            raise TypeError('position must be a tuple of 2 positive integers')
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
 
     def area(self):
-        """ return square area """
-        return (self.__size**2)
+
+        """return the current square"""
+        return (self.__size ** 2)
 
     def my_print(self):
-        """ prints to stdout square with the char # """
+
+        """print a square"""
         if self.size == 0:
             print()
         else:
@@ -54,5 +63,5 @@ class Square:
             for line in range(b):
                 print()
             for line in range(self.size):
-                print(' ' * a, end='')
-                print('#' * self.size)
+                print(' ' * a, end="")
+                print("#" * self.size)
