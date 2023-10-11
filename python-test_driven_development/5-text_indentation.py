@@ -4,6 +4,12 @@
 
 
 def text_indentation(text):
+    """ Args:
+        text (str): text to be indented
+
+        Raises:
+        TypeError: if text is not a string
+    """
     newText = ""
     needLineBreak = False
     if type(text) is not str:

@@ -1,0 +1,66 @@
+The text_indentation Module
+==========================
+
+Module to import to use ``text_indentation``
+This module defines that prints a text with 2 new lines after each of these characters: ., ? and :
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+    NameError: name 'text' is not defined
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("Hello?")
+    Hello?
+    <BLANKLINE>
+
+    >>> text_indentation("My name is. Bond. James Bond")
+    My name is.
+    <BLANKLINE>
+    Bond.
+    <BLANKLINE>
+    James Bond
+
+    >>> text_indentation("?:.")
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+    >>> text_indentation("(600 + 66)?")
+    (600 + 66)?
+    <BLANKLINE>
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation("my name is: Surprise !")
+    my name is:
+    <BLANKLINE>
+    Surprise !
+
+    >>> text_indentation("I'm a girl", "I'm a boy")
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation(inf)
+    Traceback (most recent call last):
+    NameError: name 'inf' is not defined
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation([6, 6.6])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(str(600+66))
+    666
