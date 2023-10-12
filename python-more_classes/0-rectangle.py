@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" create a arectangle """
+""" create a rectangle """
 
 
-class rectangle:
+class Rectangle:
     """ start the class """
     pass
