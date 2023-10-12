@@ -17,8 +17,8 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if type(row) is not list or len(row) == 0:
             raise TypeError(errorMsg)
-        for col in matrix[0]:
-            if type(col) is not int and type(col) is not float:
+        for column in matrix[0]:
+            if type(column) is not int and type(column) is not float:
                 raise TypeError(errorMsg)
 
     for row in matrix:
@@ -31,7 +31,7 @@ def matrix_divided(matrix, div):
 
     new = [row[:] for row in matrix]
     for row in range(len(matrix)):
-        for col in range(len(matrix[0])):
-            new[row][col] = round(matrix[row][col] / div, 2)
+        for column in range(len(matrix[0])):
+            new[row][column] = round(matrix[row][column] / div, 2)
 
     return new
