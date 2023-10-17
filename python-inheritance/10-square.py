@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+""" square that inherits from a rectangle """
 
 Rectangle = __import__('9-rectangle').Rectangle
 
