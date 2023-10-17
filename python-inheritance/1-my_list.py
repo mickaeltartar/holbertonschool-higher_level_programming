@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-""" inherits my list """
+""" Write a class MyList that inherits from list """
 
 
-class Mylist(list):
-    """ my class Mylist """
+class MyList(list):
+    """ class Mylist """
 
     def print_sorted(self):
         """ inherits from list """
 
-        if issubclass(Mylist, list):
+        if issubclass(MyList, list):
             print(sorted(self))
