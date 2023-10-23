@@ -6,10 +6,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle subclass"""
+    """ Rectangle subclass """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """instance initialization method
+        """ instance initialization method
 
         args:
             width: width of rectangle
@@ -28,52 +28,52 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """ print into stdout"""
+        """ print into stdout """
         for row in range(self.y):
             print()
         for row in range(self.height):
-            print("{} {}".format(" " * self.x, "#" * self.width))
+            print("{}{}".format(" " * self.x, "#" * self.width))
 
     @property
     def width(self):
-        """width getter method"""
+        """ width getter method """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width setter method"""
+        """ width setter method """
         self.integer_validator('width', value)
         self.__width = value
 
     @property
     def height(self):
-        """height getter method"""
+        """ height getter method """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height setter method"""
+        """ height setter method """
         self.integer_validator('height', value)
         self.__height = value
 
     @property
     def x(self):
-        """x getter method"""
+        """ x getter method """
         return self.__x
 
     @x.setter
     def x(self, value):
-        """x setter method"""
+        """ x setter method """
         self.integer_validator2('x', value)
         self.__x = value
 
     @property
     def y(self):
-        """y getter method"""
+        """ y getter method """
         return self.__y
 
     @y.setter
     def y(self, value):
-        """y setter method"""
+        """ y setter method """
         self.integer_validator2('y', value)
         self.__y = value
