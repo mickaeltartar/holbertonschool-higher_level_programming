@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-""" class module """
-
+"""
+Class Module
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """ subclass rectangle """
+    """Rectangle subclass"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """init instance method
+        """instance initialization method
 
         args:
             width: width of rectangle
@@ -17,63 +18,51 @@ class Rectangle(Base):
             y: init variable
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-
-    def update(self, *args, **kwargs):
-        """ update attributes """
-        if args:
-            listme = ["id", "width", "height", "x", "y"]
-            index = 0
-            for arg in args:
-                setattr(self, listme[index], arg)
-                index += 1
-        else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
-        """ width getter method """
+        """width getter method"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ width setter method """
-        self.checkFirstInteger("width", value)
+        """width setter method"""
+        self.integer_validator('width', value)
         self.__width = value
 
     @property
     def height(self):
-        """ height getter method """
+        """height getter method"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ height setter method """
-        self.checkFirstInteger("height", value)
+        """height setter method"""
+        self.integer_validator('height', value)
         self.__height = value
 
     @property
     def x(self):
-        """ x getter method """
+        """x getter method"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """ x setter method """
-        self.checkSecondInteger("x", value)
+        """x setter method"""
+        self.integer_validator2('x', value)
         self.__x = value
 
     @property
     def y(self):
-        """ y getter method """
+        """y getter method"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """ y setter method """
-        self.checkSecondInteger("y", value)
+        """y setter method"""
+        self.integer_validator2('y', value)
         self.__y = value
