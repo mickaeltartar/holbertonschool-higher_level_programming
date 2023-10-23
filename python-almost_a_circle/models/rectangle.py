@@ -33,7 +33,6 @@ class Rectangle(Base):
         for row in range(self.height):
             print("{} {}".format(" " * self.x, "#" * self.width))
 
-
     @property
     def width(self):
         """width getter method"""
