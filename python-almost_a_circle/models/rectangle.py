@@ -28,6 +28,7 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """ print into stdout"""
         for row in range(self.y):
             print()
         for row in range(self.height):
