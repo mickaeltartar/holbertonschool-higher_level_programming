@@ -27,6 +27,13 @@ class Rectangle(Base):
         """ return area of width & height """
         return self.width * self.height
 
+    def display(self):
+        for row in range(self.y):
+            print()
+        for row in range(self.height):
+            print("{} {}".format(" " * self.x, "#" * self.width))
+
+
     @property
     def width(self):
         """width getter method"""
