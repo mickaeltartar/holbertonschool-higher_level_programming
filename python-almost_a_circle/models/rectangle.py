@@ -32,7 +32,7 @@ class Rectangle(Base):
         for row in range(self.y):
             print()
         for row in range(self.height):
-            print("{}{}".format(" " * self.x, "#" * self.width))
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """ return value of str method """
