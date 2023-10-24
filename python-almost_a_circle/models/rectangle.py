@@ -27,6 +27,18 @@ class Rectangle(Base):
         """ return area of width & height """
         return self.width * self.height
 
+    def update(self, *args, **kwargs):
+        """ update attributes """
+        if args:
+            listme = ['id', 'width', 'height', 'x', 'y']
+            index = 0
+            for arg in args:
+                setattr(self, listme[index], arg)
+                index += 1
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def display(self):
         """ print into stdout """
         for row in range(self.y):
