@@ -54,7 +54,8 @@ class Base:
         list_objs: list of object
         """
         if list_objs:
-            index = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+            index = cls.to_json_string([obj.to_dictionary()
+                                        for obj in list_objs])
         else:
             index = '[]'
         with open(cls.__name__ + '.json', 'w') as file:
