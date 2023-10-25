@@ -60,3 +60,14 @@ class Base:
             index = '[]'
         with open(cls.__name__ + '.json', 'w') as file:
             file.write(index)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ json string static method
+        args:
+        json_string: json object type
+        """
+        if json_string:
+            return json.loads(json_string)
+        return []
+
