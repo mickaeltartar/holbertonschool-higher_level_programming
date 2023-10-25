@@ -90,7 +90,7 @@ class Base:
             list of instance json string
         """
         try:
-            filename = cls.__name__ + 'json'
+            filename = cls.__name__ + '.json'
             with open(filename, mode='r') as file:
                 data = cls.from_json_string(file.read())
             return [cls.create(**element) for element in data]
