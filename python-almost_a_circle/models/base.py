@@ -38,6 +38,7 @@ class Base:
         if value < 0:
             raise ValueError('{} must be >= 0'.format(name))
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """ return JSON string
         args:
