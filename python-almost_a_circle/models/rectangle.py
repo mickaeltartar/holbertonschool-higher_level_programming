@@ -94,3 +94,8 @@ class Rectangle(Base):
         """ y setter method """
         self.integer_validator2('y', value)
         self.__y = value
+
+    def to_dictionary(self):
+        """ return a dictionnary """
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+                'width': self.width}
