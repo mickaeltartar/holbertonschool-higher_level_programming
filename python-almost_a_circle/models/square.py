@@ -19,5 +19,5 @@ class Square(Rectangle):
         """ print method
         return: formated list
         """
-        return ("[{}] ({}) {}/{} - {}".format(self.id, self.x, self.y,
-                                              self.width))
+        return ("[Square] ({}) {:d}/{:d} - {:d}".format(self.id, self.x,
+                                                        self.y, self.width))
