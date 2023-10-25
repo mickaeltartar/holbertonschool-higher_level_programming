@@ -38,3 +38,20 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """ update square method
+        args:
+        args: pointer of arguments
+        kwargs: double pointer to the key
+        """
+        if args:
+            index = 0
+            listme = ['id', 'size', 'x', 'y']
+            for arg in args:
+                setattr(self, listme[index], arg)
+                index += 1
+            return
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
