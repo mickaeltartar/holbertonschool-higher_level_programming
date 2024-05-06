@@ -77,9 +77,15 @@ class Base:
         args:
         dictionary: double pointer
         """
-        if cls.__name__ == "Rectangle":
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if not isinstance(cls, Rectangle) or not isinstance(cls, Square):
+            raise TypeError
+
+        if isinstance(cls, Rectangle):
             dummy = cls(1, 1)
-        if cls.__name__ == "Square":
+        else:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
