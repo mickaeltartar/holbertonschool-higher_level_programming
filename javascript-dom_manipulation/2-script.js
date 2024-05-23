@@ -1,5 +1,5 @@
-const redButton = document.querySelector('#red_header');
+const Button = document.querySelector('#red_header');
 
-redButton.addEventListener('click', function () {
+Button.addEventListener('click', function () {
   document.querySelector('header').classList.add('red');
 });
