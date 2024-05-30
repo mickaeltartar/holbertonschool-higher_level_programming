@@ -1,10 +1,5 @@
-const addItem = document.getElementById('add_new_item');
-
-addItem.addEventListener('click', function () {
+document.getElementById('add_item').addEventListener('click', function () {
   const newItem = document.createElement('li');
   newItem.textContent = 'Item';
-
-  const myList = document.querySelector('.my_list');
-
-  myList.appendChild(newItem);
+  document.querySelector('ul.my_list').appendChild(newItem);
 });

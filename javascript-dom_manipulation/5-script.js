@@ -1,6 +1,4 @@
-const updateButtonOfHeader = document.getElementById('update_header');
-
-updateButtonOfHeader.addEventListener('click', function () {
-  const header = document.querySelector('header');
-  header.textContent = 'New Header!!!';
+document.getElementById('update_header').addEventListener('click', function () {
+  const headerElement = document.querySelector('header');
+  headerElement.textContent = 'New Header!!!';
 });
